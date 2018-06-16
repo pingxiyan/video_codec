@@ -18,7 +18,7 @@ Refer: [Nvidia FFmepg](https://developer.nvidia.com/ffmpeg)
     $ sudo make install
 
     Compile FFmpeg:
-    $ ./configure
+    $ ./configure --enable-cuda --enable-cuvid --enable-nvenc --enable-nonfree --enable-libnpp --extra-cflags=-usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64
     $ make -j8
     
     Compile libav:

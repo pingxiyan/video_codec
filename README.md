@@ -20,7 +20,7 @@ Refer: https://blog.csdn.net/sikao_luwei/article/details/69375126
     $ sudo make install
 
     Compile FFmpeg:
-    $ ./configure --enable-cuda --enable-cuvid --enable-nvenc --enable-nonfree --enable-libnpp --extra-cflags=-usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64
+    $ ./configure --enable-cuda --enable-cuvid --enable-nvenc --enable-nonfree --enable-libnpp --extra-cflags=-I/usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64
     $ make -j8
     
     Compile libav:

@@ -41,7 +41,7 @@ Refer: https://blog.csdn.net/sikao_luwei/article/details/69375126
     
   3. test transcoding
   
-    TEST_VIDEO=~/zizhu_parking_2017-09-23_partz_demo_1600x1200_mask.264
+    TEST_VIDEO=~/my_test_vidoe_1600x1200.264
     $ ./ffmpeg -y -hwaccel cuvid -c:v h264_cuvid -vsync 0 -i $TEST_VIDEO -vf scale_npp=800:600 -vcodec h264_nvenc result800_600.mp4
     $ ./ffmpeg -y -hwaccel cuvid -c:v h264_cuvid -vsync 0 -i $TEST_VIDEO -vf scale_npp=800:600 -vcodec h264_nvenc -maxrate 100k result800_600_maxrate_100k.mp4
     $ ./ffmpeg -y -hwaccel cuvid -c:v h264_cuvid -vsync 0 -i $TEST_VIDEO -vf scale_npp=800:600 -vcodec h264_nvenc -maxrate 200k result800_600_maxrate_200k.mp4

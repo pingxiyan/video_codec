@@ -12,7 +12,6 @@ Refer: https://blog.csdn.net/sikao_luwei/article/details/69375126
      FFmpeg: https://git.ffmpeg.org/ffmpeg.git<br>
      Libav: https://github.com/libav/libav<br>
 
-    $ sudo yum group install Development tools
     $ wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
     $ tar -xf yasm-1.3.0.tar.gz
     $ cd yasm-1.3.0

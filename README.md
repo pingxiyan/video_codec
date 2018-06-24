@@ -19,6 +19,11 @@ Refer: https://blog.csdn.net/sikao_luwei/article/details/69375126
     $ make -j8
     $ sudo make install
 
+    $ git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
+    $ make
+    $ sudo make install
+    $ export PKG_CONFIG_PATH=/home/hddl/yxp/nv-codec-headers
+
     Compile FFmpeg:
     $ ./configure --enable-cuda --enable-cuvid --enable-nvenc --enable-nonfree --enable-libnpp --extra-cflags=-I/usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64
     $ make -j8

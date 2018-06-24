@@ -5,7 +5,7 @@ Test all video decode, encode and transcode.
 Refer: [Nvidia FFmepg](https://developer.nvidia.com/ffmpeg)
 
 # Nividia cuda and drive install guide 
-Refer: https://blog.csdn.net/xierhacker/article/details/53035989
+Refer: https://blog.csdn.net/sikao_luwei/article/details/69375126
 
 #### Steps (Based on CentOS 7.4)
   1. Dependency:  <br>

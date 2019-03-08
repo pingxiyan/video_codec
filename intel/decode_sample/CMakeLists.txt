@@ -13,6 +13,8 @@ find_package(OpenCV REQUIRED)
 
 set( MFX_API_HOME $ENV{MFX_HOME} )
 
+if(UNIX)
+
 include_directories(
 	${MFX_API_HOME}/include/
 	${CMAKE_CURRENT_SOURCE_DIR}
@@ -28,4 +30,23 @@ add_executable(${TARGET_NAME} main.cpp decode.hpp decode.cpp)
 
 # Link 3rd library
 target_link_libraries(${TARGET_NAME} ${OpenCV_LIBS} libmfx.a)
+
+elseif(WIN32)
+
+include_directories(
+	${MFX_API_HOME}\\include\\
+	${CMAKE_CURRENT_SOURCE_DIR}
+	${OpenCV_INCLUDE_DIRS}
+)
+
+link_directories(${CMAKE_RUNTIME_OUTPUT_DIRECTORY} ${MFX_API_HOME}\\lib\\x64)
+
+# Create executable programe
+add_executable(${TARGET_NAME} main.cpp decode.hpp decode.cpp)
+
+# Link 3rd library
+target_link_libraries(${TARGET_NAME} ${OpenCV_LIBS} libmfx.lib)
+
+
+endif()
 
